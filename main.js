@@ -12,12 +12,15 @@ let gameSpeed = 2;
 
 function animate() {
   context.clearRect(0, 0, canvas.width, canvas.height);
+  handleObstacles();
   bird.update();
   bird.draw();
+  
   handleParticles();     
   requestAnimationFrame(animate);
   angle += 0.12;
   hue++;
+  frame++;
 }
 
 animate();
